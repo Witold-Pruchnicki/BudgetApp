@@ -25,7 +25,7 @@ function App() {
             <Container className="my-4">
                 <Stack direction="horizontal" gap="2" className="mb-4">
                     <h1 className="me-auto">Budget</h1>
-                    <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>App Budget</Button>
+                    <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
                     <Button variant="outline-primary" onClick={openAddExpenseModal}>Add expense</Button>
                 </Stack>
                 <div style={{
@@ -49,6 +49,7 @@ function App() {
                                              onViewExpensesClick={() => setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)}/>
                     <TotalBudgetCard/>
                 </div>
+
             </Container>
             <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false)}/>
             <AddExpenseModal show={showAddExpenseModal} handleClose={() => setShowAddExpenseModal(false)}
